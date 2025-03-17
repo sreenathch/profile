@@ -9,7 +9,7 @@
   "homepage": "https://sreenathch.github.io/profile/",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
