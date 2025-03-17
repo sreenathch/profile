@@ -20,14 +20,18 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '12.x'
+          node-version: '16.x'
           cache: 'npm'
 
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
 
       - name: Build
-        run: npm run build
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
+        run: |
+          export NODE_OPTIONS=--openssl-legacy-provider
+          npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
