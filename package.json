@@ -9,7 +9,7 @@
   "homepage": "https://sreenathch.github.io/profile/",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
