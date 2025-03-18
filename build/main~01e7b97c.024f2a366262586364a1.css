@@ -1,9 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 /**
 *** SIMPLE GRID
 *** (C) ZACH COLE 2016
 **/
-
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 
 /* UNIVERSAL */
 
@@ -21,7 +20,7 @@ body {
 /* ROOT FONT STYLES */
 
 * {
-  font-family: 'Lato', Helvetica, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
   /* color: #333447; */
   line-height: 1.5;
 }
@@ -59,16 +58,27 @@ p {
 }
 
 .parallaxLinearGradient {
-  background-image: linear-gradient(to right, rgba(18, 194, 233, 0.7), rgba(196, 113, 237, 0.7), rgba(246, 79, 89, 0.7)), url('./pic1.png');
+  background-image: linear-gradient(
+      to right,
+      rgba(18, 194, 233, 0.7),
+      rgba(196, 113, 237, 0.7),
+      rgba(246, 79, 89, 0.7)
+    ),
+    url(/profile/images/pic1.27f71e897611ef064d8f87c50f046c6e.png);
   background-size: cover;
-  background-position: right 50% top 50%;
+  background-position: right 50% top 20%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100vh;
 }
 
 .linearGradient {
-  background-image: linear-gradient(to right, rgba(18, 194, 233, 0.7), rgba(196, 113, 237, 0.7), rgba(246, 79, 89, 0.7));
+  background-image: linear-gradient(
+    to right,
+    rgba(18, 194, 233, 0.7),
+    rgba(196, 113, 237, 0.7),
+    rgba(246, 79, 89, 0.7)
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -81,18 +91,22 @@ p {
 }
 
 .fontColor {
-  background: linear-gradient(to right, rgba(18, 194, 233, 0.7), rgba(196, 113, 237, 0.7), rgba(246, 79, 89, 0.7));
+  background: linear-gradient(
+    to right,
+    rgba(18, 194, 233, 0.7),
+    rgba(196, 113, 237, 0.7),
+    rgba(246, 79, 89, 0.7)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .aboutMeFont {
-  font-family: 'Crimson Text', serif;
-  font-size: 19px;/* fallback for old browsers */
+  font-family: "Crimson Text", serif;
+  font-size: 19px; /* fallback for old browsers */
   background: linear-gradient(to right, #c33764, #1d2671);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 
 .white {
@@ -216,22 +230,24 @@ p {
 }
 
 .row::after {
-	content: "";
-	display: table;
-	clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .hidden-sm {
   display: none;
 }
 
-@media only screen and (min-width: 33.75em) {  /* 540px */
+@media only screen and (min-width: 33.75em) {
+  /* 540px */
   .container {
     width: 80%;
   }
 }
 
-@media only screen and (min-width: 45em) {  /* 720px */
+@media only screen and (min-width: 45em) {
+  /* 720px */
   .col-1 {
     width: 4.33%;
   }
@@ -314,7 +330,7 @@ p {
 
   .screenCenter {
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -324,7 +340,8 @@ p {
   }
 }
 
-@media only screen and (min-width: 60em) { /* 960px */
+@media only screen and (min-width: 60em) {
+  /* 960px */
   .container {
     width: 80%;
     max-width: 60rem;
@@ -332,10 +349,11 @@ p {
 }
 
 /* html, body, #app, #app>div { */
-  /* background-color: red; */
-  /* background-color: #f5f7f8; */
-  /* background-image: linear-gradient(to right top, #F24130, #262626); */
-  /* background-image: linear-gradient(#ee0979, #ff6a00); */
-  /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
-  /* background-image: linear-gradient(to right top, #D836AD, #1A62F2, #3A7FD8, #91BBF2, #D2D81E); */
+/* background-color: red; */
+/* background-color: #f5f7f8; */
+/* background-image: linear-gradient(to right top, #F24130, #262626); */
+/* background-image: linear-gradient(#ee0979, #ff6a00); */
+/* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+/* background-image: linear-gradient(to right top, #D836AD, #1A62F2, #3A7FD8, #91BBF2, #D2D81E); */
 /* } */
+
