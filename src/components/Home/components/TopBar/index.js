@@ -40,10 +40,7 @@ export const TopBar = ({ onDownloadResume, navigateTo }: Function) => (
       <Tabs title="Skills" handleOnClick={() => navigateTo("focusMySkills")} />
       <Tabs title="Contact" handleOnClick={() => navigateTo("focusAboutMe")} />
       <Tabs title="About Me" handleOnClick={() => navigateTo("focusAboutMe")} />
-      <DownloadResume
-        title="Download Resume"
-        onButtonPress={onDownloadResume}
-      />
+      <DownloadResume title="Resume" onButtonPress={onDownloadResume} />
     </div>
   </div>
 );
