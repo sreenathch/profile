@@ -41,12 +41,6 @@ const values = [
   },
   {
     year: 2023,
-    degree: "Frontend engineer",
-    name: "United Health Group (Optum)",
-    duration: "2023",
-  },
-  {
-    year: 2024,
     degree: "Senior Software engineer",
     name: "Walmart",
     duration: "2024-Present",
