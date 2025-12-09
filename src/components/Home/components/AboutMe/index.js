@@ -14,9 +14,14 @@ const calculateAge = (dateOfBirth: string) => {
     return currentYear.diff(yearOfbirthMoment, 'years');
 };
 
-const lineOne = `Having over ${calculateAge('1/11/2014')} years of experience in software development, I have worked for companies in the web Marketplace, online auction, E-commerce, Educational and Automobile Industries.`;
-const lineTwo = 'I bring to the table a robust skill set encompassing cutting-edge technologies including React(JS/Native), Redux, Saga, Thunk, XState, and Hooks. My expertise extends to backend technologies like Ruby Sinatra, Python Flask, and Java, and I have experience working with distributed systems such as Kafka. I\'m proficient in containerization with Docker, experienced in orchestrating applications with Kubernetes, and well-versed in setting up CI/CD pipelines using Jenkins. I\'m enthusiastic about delivering top-notch solutions and exploring innovative ways to leverage technology for business excellence.';
-const lineThree = 'My interests outside of work include watching movies, listening to music.';
+const lineOne = `With ${calculateAge('1/11/2014')}+ years of software development experience, I build scalable web applications across e-commerce, online auctions, automotive, and education industries. My expertise centers on modern frontend development with React and React Native, designing robust state management using Redux, Saga, Thunk, XState, and Hooks.`;
+const lineTwo = 'I bring full-stack capabilities with backend experience in Ruby Sinatra, Python Flask, and Java. My toolkit extends to distributed systems (Kafka), containerization (Docker), orchestration (Kubernetes), and CI/CD pipelines (Jenkins)—ensuring applications are resilient and production-ready at scale.';
+const lineThree = 'I\'ve contributed to platforms serving millions of users, built component libraries adopted across teams, and established practices that improve code quality and delivery speed. I focus on clean architecture, performance, and solutions that create real business impact.';
+
+
+// const lineOne = `Having over ${calculateAge('1/11/2014')} years of experience in software development, I have worked for companies in the web Marketplace, online auction, E-commerce, Educational and Automobile Industries.`;
+// const lineTwo = 'I bring to the table a robust skill set encompassing cutting-edge technologies including React(JS/Native), Redux, Saga, Thunk, XState, and Hooks. My expertise extends to backend technologies like Ruby Sinatra, Python Flask, and Java, and I have experience working with distributed systems such as Kafka. I\'m proficient in containerization with Docker, experienced in orchestrating applications with Kubernetes, and well-versed in setting up CI/CD pipelines using Jenkins. I\'m enthusiastic about delivering top-notch solutions and exploring innovative ways to leverage technology for business excellence.';
+// const lineThree = 'My interests outside of work include watching movies, listening to music.';
 
 const AboutMeImage = ({imageSource}: string) => (
     <div className="w-4/5">
