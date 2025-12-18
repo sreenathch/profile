@@ -1,35 +1,78 @@
 # Shreenath Chakinala Profile
 
+A modern, animated portfolio website built with React.
 
-### Prerequisites
+
+## Features
+
+- 🎨 Modern dark theme with gradient accents
+- ✨ Smooth animations and transitions
+- 📱 Fully responsive design
+- ⚡ Fast loading with webpack optimization
+- 🔧 Easy to customize
+
+## Prerequisites
 
 Node LTS is recommended. Also yarn is to be installed at global level.
 
-```
+```bash
 npm install -g yarn
 ```
 
-### Installing
+## Installing
 
 First clone this repository and run `yarn` on the root folder
 
-```
+```bash
 git clone <repository>
 
-yarn install / yarn
-
-OR
-
+yarn install
+# OR
 npm install
-
 ```
 
-To run the application
+## Running Locally
 
+```bash
+yarn start
+# OR
+npm start
 ```
-yarn run start / yarn start
+
+Opens at http://localhost:8082
+
+## Building for Production
+
+```bash
+yarn build
+# OR
+npm run build
 ```
 
-## Authors
+Build files will be in `/build` folder.
 
-* **Shreenath Chakinala**
+## Deployment
+
+This project is configured for GitHub Pages deployment. The build automatically deploys when you push to the main branch.
+
+## Customization
+
+Edit the `CONFIG` object in `src/components/Home/Home.view.js` to update:
+- Personal information
+- Skills and experience
+- Social links
+- Resume URL
+
+## Tech Stack
+
+- React 16+
+- Redux
+- Webpack 4
+- CSS3 with animations
+- React Icons
+
+## Author
+
+**Shreenath Chakinala**
+- LinkedIn: [shreenath-chakinala](https://www.linkedin.com/in/shreenath-chakinala/)
+- GitHub: [sreenathch](https://github.com/sreenathch)

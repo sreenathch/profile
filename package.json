@@ -1,9 +1,9 @@
 {
   "name": "shreenath.github.io",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Shreenath Chakinala Profile",
   "main": "index.js",
-  "repository": "https://github.com/sreenathch/porfile.git",
+  "repository": "https://github.com/sreenathch/profile.git",
   "author": "<chakinalasreenath@gmail.com>",
   "license": "MIT",
   "homepage": "https://sreenathch.github.io/profile/",
@@ -14,21 +14,13 @@
     "prebuild": "npm run clean"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.2.6",
-    "antd": "^3.17.0",
-    "axios": "^0.18.0",
     "babel-runtime": "^6.26.0",
-    "moment": "^2.29.4",
-    "ramda": "^0.26.1",
-    "rc-progress": "^2.3.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-icons": "^4.11.0",
     "react-redux": "^6.0.1",
-    "react-scripts": "^5.0.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "render-if": "^0.1.1",
     "webpack": "^4.29.5"
   },
   "devDependencies": {
