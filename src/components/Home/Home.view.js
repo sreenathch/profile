@@ -353,7 +353,7 @@ export default class Portfolio extends Component {
                   and education industries.
                 </p>
                 <p>
-                  My expertise centers on modern frontend development with <strong>React and React Native</strong>,
+                  My expertise centers on modern frontend development with <strong>ReactJS, React Native and Angular</strong>,
                   designing robust state management using Redux, Saga, Thunk, XState, and Hooks.
                 </p>
                 <p>
