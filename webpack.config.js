@@ -22,11 +22,6 @@ module.exports = {
     minimize: !isDevelopment,
     splitChunks: {
       chunks: "all",
-      minSize: 20000,
-      maxSize: 244000,
-      minChunks: 1,
-      maxAsyncRequests: 30,
-      maxInitialRequests: 30,
       cacheGroups: {
         defaultVendors: {
           test: /[\\/]node_modules[\\/]/,

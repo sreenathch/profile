@@ -1,23 +1,21 @@
 import React, { Component } from "react";
-import { 
-  FaReact, FaNodeJs, FaDocker, FaGitAlt, FaLinkedin, FaGithub, 
+import {
+  FaReact, FaNodeJs, FaDocker, FaGitAlt, FaLinkedin, FaGithub,
   FaEnvelope, FaPhone, FaMapMarkerAlt, FaDownload, FaExternalLinkAlt,
   FaJava, FaPython, FaJs, FaAngular, FaChevronDown, FaCode,
   FaYoutube, FaFilm, FaHeadphones, FaBook, FaBars, FaTimes,
-  FaMedium, FaClock, FaCalendarAlt
-} from 'react-icons/fa';
-import {
+  FaMedium, FaClock, FaCalendarAlt,
   SiRedux, SiTypescript, SiKubernetes, SiApachekafka,
-  SiRubysinatra, SiFlask, SiJenkins, SiReduxsaga
-} from 'react-icons/si';
-import { DiRuby, DiPython } from 'react-icons/di';
-import { LiaDocker } from 'react-icons/lia';
-import { GiRam } from 'react-icons/gi';
+  SiRubysinatra, SiFlask, SiJenkins, SiReduxsaga,
+  DiRuby, DiPython,
+  LiaDocker,
+  GiRam
+} from '../icons';
 
 // Import profile image - place your image at assets/profile/pic123.png
 let profileImage;
 try {
-  profileImage = require('../../../assets/profile/pic123.png');
+  profileImage = require('../../../assets/profile/pic123.jpg');
 } catch (e) {
   profileImage = null;
 }
@@ -115,6 +113,11 @@ const EXPERIENCE = [
 
 const NPM_PACKAGES = [
   {
+    name: 'viewportify',
+    description: 'Zero-dependency, TypeScript-first toolkit for accurate viewport dimensions across iOS, Android & all browsers. Solves the 100vh issue on mobile.',
+    url: 'https://www.npmjs.com/package/viewportify'
+  },
+  {
     name: 'direct-drop-area',
     description: 'Lightweight drag & drop file upload component for React',
     url: 'https://www.npmjs.com/package/direct-drop-area'
@@ -126,7 +129,34 @@ const NPM_PACKAGES = [
   }
 ];
 
+const PROJECTS = [
+  {
+    name: 'JSON Toolkit',
+    tagline: 'One tool to replace 6 browser tabs',
+    description: 'Free, open-source JSON/YAML diff checker, validator, and formatter. Compare, beautify, minify, and convert — all in one place.',
+    tech: ['React', 'Vite', 'JavaScript'],
+    github: 'https://github.com/sreenathch/json-toolkit',
+    demo: 'https://sreenathch.github.io/json-toolkit'
+  }
+];
+
 const BLOG_POSTS = [
+  {
+    title: 'I Got Tired of Juggling 6 Browser Tabs Just to Work with JSON — So I Built One Tool to Replace Them All',
+    description: 'How I built JSON Toolkit — a free, open-source JSON diff checker, validator, and formatter that replaces multiple browser tabs with one tool.',
+    url: 'https://medium.com/@chakinalasreenath/i-got-tired-of-juggling-6-browser-tabs-just-to-work-with-json-so-i-built-one-tool-to-replace-1592115904d0',
+    date: 'Jan 2026',
+    readTime: '5 min read',
+    tags: ['React', 'JSON', 'Developer Tools']
+  },
+  {
+    title: 'Stop Fighting with 100vh on iOS — Meet Viewportify',
+    description: 'A zero-dependency, TypeScript-first npm package that gives you accurate viewport dimensions on every platform, every browser, every time.',
+    url: 'https://medium.com/@chakinalasreenath/stop-fighting-with-100vh-on-ios-meet-viewportify-8690c47d6192',
+    date: 'Jan 2026',
+    readTime: '6 min read',
+    tags: ['TypeScript', 'iOS', 'npm']
+  },
   {
     title: 'Angular vs React in 2025: Which One Should You Actually Pick?',
     description: 'A practical, no-BS comparison of Angular and React in 2025. Covering signals, server components, and when to use each framework.',
@@ -163,6 +193,7 @@ export default class Portfolio extends Component {
       about: React.createRef(),
       skills: React.createRef(),
       experience: React.createRef(),
+      projects: React.createRef(),
       blog: React.createRef(),
       packages: React.createRef(),
       contact: React.createRef()
@@ -241,7 +272,7 @@ export default class Portfolio extends Component {
 
   render() {
     const { activeSection, scrolled, menuOpen } = this.state;
-    const navItems = ['home', 'about', 'skills', 'experience', 'blog', 'packages', 'contact'];
+    const navItems = ['home', 'about', 'skills', 'experience', 'projects', 'blog', 'packages', 'contact'];
 
     return (
       <div className="portfolio">
@@ -278,8 +309,9 @@ export default class Portfolio extends Component {
           </div>
         </nav>
 
+        <main>
         {/* Hero Section */}
-        <section ref={this.sectionRefs.home} className="hero">
+        <section ref={this.sectionRefs.home} className="hero" aria-label="Introduction">
           <div className="hero__particles">
             {[...Array(20)].map((_, i) => (
               <div
@@ -331,7 +363,7 @@ export default class Portfolio extends Component {
         </section>
 
         {/* About Section */}
-        <section ref={this.sectionRefs.about} className="about">
+        <section ref={this.sectionRefs.about} className="about" aria-label="About Me">
           <div className="container">
             <h2 className="section__title">About Me</h2>
 
@@ -407,7 +439,7 @@ export default class Portfolio extends Component {
         </section>
 
         {/* Skills Section */}
-        <section ref={this.sectionRefs.skills} className="skills">
+        <section ref={this.sectionRefs.skills} className="skills" aria-label="Skills and Technologies">
           <div className="container">
             <h2 className="section__title">Skills & Technologies</h2>
             <p className="section__subtitle">Technologies I work with daily</p>
@@ -440,7 +472,7 @@ export default class Portfolio extends Component {
         </section>
 
         {/* Experience Section */}
-        <section ref={this.sectionRefs.experience} className="experience">
+        <section ref={this.sectionRefs.experience} className="experience" aria-label="Experience and Education">
           <div className="container">
             <h2 className="section__title">Experience & Education</h2>
             <p className="section__subtitle">My professional journey</p>
@@ -468,8 +500,54 @@ export default class Portfolio extends Component {
           </div>
         </section>
 
+        {/* Projects Section */}
+        <section ref={this.sectionRefs.projects} className="projects" aria-label="Projects">
+          <div className="container">
+            <h2 className="section__title">Projects</h2>
+            <p className="section__subtitle">Web apps & tools I've built</p>
+
+            <div className="projects__grid">
+              {PROJECTS.map((project) => (
+                <div key={project.name} className="project-card">
+                  <div className="project-card__header">
+                    <FaCode className="project-card__icon" />
+                    <div className="project-card__links">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-card__link-btn"
+                      >
+                        <FaGithub /> Code
+                      </a>
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-card__link-btn project-card__link-btn--primary"
+                        >
+                          <FaExternalLinkAlt /> Live Demo
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  <h3 className="project-card__name">{project.name}</h3>
+                  <p className="project-card__tagline">{project.tagline}</p>
+                  <p className="project-card__desc">{project.description}</p>
+                  <div className="project-card__tags">
+                    {project.tech.map((tag) => (
+                      <span key={tag} className="project-card__tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Blog Section */}
-        <section ref={this.sectionRefs.blog} className="blog">
+        <section ref={this.sectionRefs.blog} className="blog" aria-label="Blog">
           <div className="container">
             <h2 className="section__title">Blog</h2>
             <p className="section__subtitle">Thoughts and tutorials</p>
@@ -523,7 +601,7 @@ export default class Portfolio extends Component {
         </section>
 
         {/* NPM Packages Section */}
-        <section ref={this.sectionRefs.packages} className="packages">
+        <section ref={this.sectionRefs.packages} className="packages" aria-label="NPM Packages">
           <div className="container">
             <h2 className="section__title">NPM Packages</h2>
             <p className="section__subtitle">Open source contributions</p>
@@ -550,7 +628,7 @@ export default class Portfolio extends Component {
         </section>
 
         {/* Contact Section */}
-        <section ref={this.sectionRefs.contact} className="contact">
+        <section ref={this.sectionRefs.contact} className="contact" aria-label="Contact">
           <div className="container">
             <h2 className="section__title">Get In Touch</h2>
             <p className="section__subtitle">Let's work together</p>
@@ -626,6 +704,8 @@ export default class Portfolio extends Component {
             </div>
           </div>
         </section>
+
+        </main>
 
         {/* Footer */}
         <footer className="footer">

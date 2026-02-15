@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sreenathch.github.io/profile/sitemap.xml

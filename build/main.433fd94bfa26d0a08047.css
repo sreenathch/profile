@@ -335,7 +335,7 @@ img {
   );
   background-size: 400% 400%;
   animation: gradientMove 15s ease infinite;
-  background: var(--gradient-hero), url('./assets/profile/pic123.jpg');
+  background: var(--gradient-hero), url(/profile/images/pic123.231b8634eb12eb259ccc1792eccfabfb.jpg);
   background-size: cover;
   background-position: right center;
   background-attachment: fixed;

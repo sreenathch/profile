@@ -9,7 +9,7 @@
   "homepage": "https://sreenathch.github.io/profile/",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --inline --port 8082 --hot",
-    "build": "cross-env NODE_ENV=production webpack",
+    "build": "cross-env NODE_ENV=production webpack && cp robots.txt sitemap.xml build/",
     "clean": "rm -rf build",
     "prebuild": "npm run clean"
   },
@@ -17,7 +17,6 @@
     "babel-runtime": "^6.26.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-icons": "^4.11.0",
     "react-redux": "^6.0.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm start)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebSearch",
+      "Bash(curl:*)",
+      "Bash(python3:*)"
+    ]
+  }
+}
